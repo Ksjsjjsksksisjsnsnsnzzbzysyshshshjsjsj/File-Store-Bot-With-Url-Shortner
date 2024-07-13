@@ -5,7 +5,7 @@ class Config(object):
   API_HASH = os.environ.get("API_HASH", "5e191a05983f2f63986e92bcc4f94835")
   BOT_TOKEN = os.environ.get("BOT_TOKEN", "7085463016:AAGAcPG-pKHe4ZJXqHXJM7IBQZwvXRD8euU")
   BOT_USERNAME = os.environ.get("BOT_USERNAME", "publicfilestorebot_bot")
-  DB_CHANNEL = int(os.environ.get("DB_CHANNEL", "-2249026695"))
+  DB_CHANNEL = int(os.environ.get("DB_CHANNEL", "-1002249026695"))
   SHORTLINK_URL = os.environ.get('SHORTLINK_URL', "api.shareus.io")
   SHORTLINK_API = os.environ.get('SHORTLINK_API', "X8KgVEykIqhQIXefXcmrJb9aSPt2")
   BOT_OWNER = int(os.environ.get("BOT_OWNER", "7392904577"))
