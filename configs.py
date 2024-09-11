@@ -2,7 +2,7 @@ import os
 
 class Config(object):
   API_ID = int(os.environ.get("API_ID", "9619481"))
-  API_HASH = os.environ.get("API_HASH", "10effb30531c66d27b90f1e07f6bd071")
+  API_HASH = os.environ.get("API_HASH", "10effb30531c66d27b90f1e07f6b1")
   BOT_TOKEN = os.environ.get("BOT_TOKEN", "7213341781:AAF_xuREb5MrKdmZVfnaI-xV-w1jrl35yJQ")
   BOT_USERNAME = os.environ.get("BOT_USERNAME", "Permanent_Public_File_Store_bot")
   DB_CHANNEL = int(os.environ.get("DB_CHANNEL", "-1002209523802"))
