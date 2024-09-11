@@ -17,6 +17,11 @@ class Config(object):
   BROADCAST_AS_COPY = bool(os.environ.get("BROADCAST_AS_COPY", True))
   BANNED_CHAT_IDS = list(set(int(x) for x in os.environ.get("BANNED_CHAT_IDS", "").split()))
   OTHER_USERS_CAN_SAVE_FILE = bool(os.environ.get("OTHER_USERS_CAN_SAVE_FILE", True))
+  WEBSITE_URL_MODE = bool(environ.get('WEBSITE_URL_MODE', True)) # Set True or False
+
+# If Website Url Mode Is True Then Fill All Required Variable, If False Then Don't Fill.
+WEBSITE_URL = environ.get("WEBSITE_URL", "https://qt-movie.blogspot.com/2024/09/test.html") # For More Information Check Video On Yt - @Tech_VJ
+
   ABOUT_BOT_TEXT = f"""
 This is a Permanent Public file Store bot. 
 𝗣𝗹𝗲𝗮𝘀𝗲 𝗗𝗼𝗻'𝘁 𝗨𝗽𝗹𝗼𝗮𝗱 𝟭𝟴+ 𝗩𝗶𝗱𝗲𝗼𝘀 𝗜𝗳 𝘆𝗼𝘂 𝘂𝗽𝗹𝗼𝗮𝗱 𝘁𝗵𝗲𝗻 𝘆𝗼𝘂 𝗯𝗮𝗻𝗻𝗲𝗱 💀About Bot.
