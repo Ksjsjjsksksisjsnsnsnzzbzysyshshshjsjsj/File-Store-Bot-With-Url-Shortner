@@ -1,7 +1,7 @@
 import os
 from os import getenv, environ
 
-CRAZY_PARMANANT_URL = os.environ.get("CRAZY_PARMANANT_URL", "https://qt-movie.blogspot.com/2024/11/qt-movie-bot.html")
+CRAZY_PARMANANT_URL = os.environ.get("CRAZY_PARMANANT_URL", "https://telegramfilestorebot.blogspot.com/2024/12/url.html")
 
 class Config(object):
   API_ID = int(os.environ.get("API_ID", "9619481"))
