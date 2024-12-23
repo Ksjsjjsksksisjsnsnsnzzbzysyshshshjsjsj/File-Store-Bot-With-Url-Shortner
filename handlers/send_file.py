@@ -1,12 +1,8 @@
 import asyncio
-import requests
-import string
-import random
 from configs import Config
 from pyrogram import Client
 from pyrogram.types import Message
 from pyrogram.errors import FloodWait
-from handlers.helpers import str_to_b64
 
 async def media_forward(bot: Client, user_id: int, file_id: int):
     try:
@@ -24,15 +20,18 @@ async def send_media_and_reply(bot: Client, user_id: int, file_ids: list):
         sent_message = await media_forward(bot, user_id, file_id)
         sent_messages.append(sent_message)
 
-    # Send the "File will be deleted" message as the last message
+    # Send a single delete notification after all files are forwarded
     deletion_notice = await bot.send_message(
         chat_id=user_id,
-        text="Files will be deleted in 30 minutes to avoid copyright issues. Please save them.",
+        text="All files will be deleted in 30 minutes to avoid copyright issues. Please save them.",
         disable_web_page_preview=True
     )
 
-    # Schedule deletion of all messages after 30 minutes
-    asyncio.create_task(delete_after_delay(sent_messages + [deletion_notice], 1800))
+    # Add the delete notification to the list of messages to delete
+    sent_messages.append(deletion_notice)
+
+    # Schedule all messages for deletion after 30 minutes
+    asyncio.create_task(delete_after_delay(sent_messages, 1800))
 
 async def delete_after_delay(messages, delay):
     await asyncio.sleep(delay)
