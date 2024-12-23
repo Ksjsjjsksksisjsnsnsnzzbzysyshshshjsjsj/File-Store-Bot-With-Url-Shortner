@@ -43,5 +43,5 @@ This is a Permanent public 𝘽𝙤𝙩.
 """
   HOME_TEXT = """
 Hi...
-This is a Permanent FileStore Bot for @qt_movie
+This is a Permanent FileStore Bot for 
 """
